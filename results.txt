@@ -1,0 +1,31 @@
+!python testbed.py --model  JackFram/llama-68m   --target  TinyLlama/TinyLlama_v1.1\
+--T 0.6 --P 1.0  --start 0 --end 100 --M 384 --growmap ../demo_tree.pt --Mode greedy --dataset cnn
+
+For Sequoia Tree (Size 32, depth 4)
+total time :126.39108s, latency :0.00996s, decoding step: 12692, large model step: 3930, 3.2295165394402034
+speculate time: 0.0047299534471476985 verify time: 0.03148469563875124
+large model run: 0.02811653993770908 accept loop: 0.0014120747464132681
+small model run: 0.003598133079688169 sample time: 0.0009216185338192136
+
+
+For Sequoia Tree (Size 37, depth 4) # Max size for depth 4
+
+total time :126.37248s, latency :0.00989s, decoding step: 12776, large model step: 3878, 3.294481691593605
+speculate time: 0.004739270694928551 verify time: 0.031007939005983514
+large model run: 0.02765897848796693 accept loop: 0.0014149268005435715 kv select: 0.0008286721748041059
+small model run: 0.0036111675664317108 sample time: 0.0009185209546914613
+
+For Sequoia Tree (Size 38, depth 5) # Min size for depth 5
+
+total time :123.23864s, latency :0.00962s, decoding step: 12806, large model step: 3777, 3.3905215779719353
+total decoding steps: 12367 large model steps: 3677 avg decoding step: 3.3633396790862116
+speculate time: 0.0058768552251571475 verify time: 0.031215943945209584
+large model run: 0.02782690664462042 accept loop: 0.0014488005852096263 kv select: 0.0008350063803275708
+small model run: 0.004486600892972388 sample time: 0.0011371935324919168
+
+For Sequoia Tree (Size 128, depth 5)
+
+total decoding steps: 12309 large model steps: 3162 avg decoding step: 3.8927893738140416
+speculate time: 0.007549424174463802 verify time: 0.033935858357337215
+large model run: 0.029578636523517606 accept loop: 0.0022966045883921864 kv select: 0.000876495311864941
+small model run: 0.00558316956435028 sample time: 0.0016811114937952997
