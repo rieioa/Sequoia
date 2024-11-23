@@ -155,6 +155,7 @@ def simulation_benchmark(target_model : GraphInferenceEngineTG, draft_model: Gra
     kv_select = 0.0
     sample_time = 0.0
     small_model_compute = 0.0
+    total_time = 0.0                 
     dtype = torch.float16
     attn_mask = torch.full((max_length, max_length), torch.finfo(dtype).min, dtype=dtype, device='cuda:0')
     sequence = torch.tensor(list(range(max_length)), device='cuda:0').long().unsqueeze(-1)
@@ -208,10 +209,12 @@ def simulation_benchmark(target_model : GraphInferenceEngineTG, draft_model: Gra
                     verify_time += (t4 - t3)
                     num_decoding_steps += (valid_tokens.shape[0] - initial_size)
                     num_large_model_steps += 1
+                    total_time += (t4 - t1)
             draft_model.clear_kv()
             target_model.clear_kv()
             if num_large_model_steps > 0:
                 print(num_decoding_steps / num_large_model_steps)
+    print("total time :{:.5f}s".format(total_time))
     print("total decoding steps: {}".format(num_decoding_steps), "large model steps: {}".format(num_large_model_steps), "avg decoding step: {}".format(num_decoding_steps / num_large_model_steps))
     print("initialization time:{}".format(initialize_time / num_large_model_steps), "speculate time: {}".format(speculate_time / num_large_model_steps),  "verify time: {}".format(verify_time / num_large_model_steps))
     print("large model run: {}".format(large_model_run / num_large_model_steps) , "accept loop: {}".format(accept_loop / num_large_model_steps), "kv select: {}".format(kv_select / num_large_model_steps))
