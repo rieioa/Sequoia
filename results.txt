@@ -10,22 +10,71 @@ small model run: 0.003598133079688169 sample time: 0.0009216185338192136
 
 For Sequoia Tree (Size 37, depth 4) # Max size for depth 4
 
-total time :126.37248s, latency :0.00989s, decoding step: 12776, large model step: 3878, 3.294481691593605
-speculate time: 0.004739270694928551 verify time: 0.031007939005983514
-large model run: 0.02765897848796693 accept loop: 0.0014149268005435715 kv select: 0.0008286721748041059
-small model run: 0.0036111675664317108 sample time: 0.0009185209546914613
+total time :139.88546s
+total decoding steps: 12359 large model steps: 3778 avg decoding step: 3.2713075701429326
+initialization time:1.2928244296427818e-05 speculate time: 0.004754568736599891 verify time: 0.031320117591486334
+large model run: 0.027991801105901132 accept loop: 0.0014202332862664178 kv select: 0.0008013144947978919
+small model run: 0.0036156299948503 sample time: 0.0009269481490313407
 
 For Sequoia Tree (Size 38, depth 5) # Min size for depth 5
 
-total time :123.23864s, latency :0.00962s, decoding step: 12806, large model step: 3777, 3.3905215779719353
+total time :142.10332s
 total decoding steps: 12367 large model steps: 3677 avg decoding step: 3.3633396790862116
-speculate time: 0.0058768552251571475 verify time: 0.031215943945209584
-large model run: 0.02782690664462042 accept loop: 0.0014488005852096263 kv select: 0.0008350063803275708
-small model run: 0.004486600892972388 sample time: 0.0011371935324919168
+initialization time:1.2743301225609841e-05 speculate time: 0.005890140657941057 verify time: 0.03174341934220701
+large model run: 0.028368434991595342 accept loop: 0.0014641703812363423 kv select: 0.000798081067842344
+small model run: 0.004490408133578618 sample time: 0.001143502838948125
 
 For Sequoia Tree (Size 128, depth 5)
 
+total time :137.27628s
 total decoding steps: 12309 large model steps: 3162 avg decoding step: 3.8927893738140416
-speculate time: 0.007549424174463802 verify time: 0.033935858357337215
-large model run: 0.029578636523517606 accept loop: 0.0022966045883921864 kv select: 0.000876495311864941
-small model run: 0.00558316956435028 sample time: 0.0016811114937952997
+initialization time:1.2660011470053937e-05 speculate time: 0.007549644044348894 verify time: 0.034581820396288224
+large model run: 0.03017507731952221 accept loop: 0.00231880933555299 kv select: 0.0008994554281988753
+small model run: 0.005566408255671791 sample time: 0.0016990112851195363
+
+For Sequoia Tree (Size 128, depth 5) Branch max = 7
+
+total time :139.39255s
+total decoding steps: 12372 large model steps: 3341 avg decoding step: 3.7030829093085904
+initialization time:1.266301659473007e-05 speculate time: 0.007425040051238474 verify time: 0.03309379513125975
+large model run: 0.02908646842741888 accept loop: 0.001965505211198448 kv select: 0.0008673709297351444
+small model run: 0.005529978502942074 sample time: 0.0016176806206975787
+
+For Sequoia Tree (Size 128, depth 6) Branch max = 6
+
+total time :136.20576s
+total decoding steps: 12336 large model steps: 3214 avg decoding step: 3.838207840696951
+initialization time:1.2399027194751296e-05 speculate time: 0.008559099991423933 verify time: 0.0325655589284701
+large model run: 0.028676208458706394 accept loop: 0.0018934228068638382 kv select: 0.0008419260299198361
+small model run: 0.006377337508566571 sample time: 0.0018704879632556964
+
+For Sequoia Tree (Size 128, depth 6) Branch max = 5
+
+total time :132.64177s
+total decoding steps: 12294 large model steps: 3138 avg decoding step: 3.9177820267686423
+initialization time:1.3094863137901019e-05 speculate time: 0.008506549627937428 verify time: 0.03248410790189958
+large model run: 0.02866038856725164 accept loop: 0.0018153336490317467 kv select: 0.0008493658841378071
+small model run: 0.00636320124772645 sample time: 0.001822734806019459
+
+For Sequoia Tree (Size 128, depth 6) Branch max = 4
+
+total time :138.99156s
+total decoding steps: 12234 large model steps: 3233 avg decoding step: 3.7841014537581192
+initialization time:1.2466644230472978e-05 speculate time: 0.008486683804517628 verify time: 0.033231182803393815
+large model run: 0.029422707281870773 accept loop: 0.0017569318040398818 kv select: 0.0008824727795568738
+small model run: 0.006340194994769817 sample time: 0.0018262529830389853
+
+For Sequoia Tree (Size 96, depth 6) Branch max = 4
+
+total time :138.46587s
+total decoding steps: 12401 large model steps: 3332 avg decoding step: 3.7217887154861944
+initialization time:1.276183385952037e-05 speculate time: 0.007931509939562372 verify time: 0.03243935558976246
+large model run: 0.028841807561762193 accept loop: 0.001613726922157718 kv select: 0.0008426358719833759
+small model run: 0.006019121458550461 sample time: 0.0015987264437406432
+
+
+
+
+
+
+
