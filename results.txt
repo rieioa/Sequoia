@@ -72,6 +72,95 @@ initialization time:1.276183385952037e-05 speculate time: 0.007931509939562372 v
 large model run: 0.028841807561762193 accept loop: 0.001613726922157718 kv select: 0.0008426358719833759
 small model run: 0.006019121458550461 sample time: 0.0015987264437406432
 
+--------------------------------------------------------------------------------------------------------------------------------
+
+4-sequence tree
+total time :176.85848s
+total decoding steps: 12459 large model steps: 5509 avg decoding step: 2.26157197313487
+initialization time:1.2424122423804548e-05 speculate time: 0.0031693743845797166 verify time: 0.028921755802655182
+large model run: 0.026526472749846843 accept loop: 0.0005973291648107208 kv select: 0.0007154134856657014
+small model run: 0.002417787273861921 sample time: 0.000598692292417539
+
+
+Baseline
+total time :350.97511s
+total decoding steps: 12700 large model steps: 12700 avg decoding step: 1.0
+initialization time:1.1995232950045368e-05 speculate time: 1.4812401899202603e-05 verify time: 0.027609027577197458
+large model run: 0.02571348128356333 accept loop: 0.00015742405193058524 kv select: 0.0006588525471724863
+small model run: 0.0 sample time: 0.0
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+Depth includes root.
+
+Size 61 
+total time :128.59988s
+total decoding steps: 12135 large model steps: 3393 avg decoding step: 3.576480990274094
+initialization time:1.2517713214526863e-05 speculate time: 0.007318824151958507 verify time: 0.030570184731251577
+
+Size 60
+total time :127.97339s
+total decoding steps: 12325 large model steps: 3398 avg decoding step: 3.6271336080047085
+initialization time:1.2673441980641473e-05 speculate time: 0.006211488789990062 verify time: 0.03143722264467793
+
+2361MB Allocated memory and 2606MB Cached memory
+
+Size 44 
+total time :135.50352s
+total decoding steps: 12333 large model steps: 3536 avg decoding step: 3.487839366515837
+initialization time:1.2708600290220787e-05 speculate time: 0.006073756455296305 verify time: 0.03223466684375953
+
+Size 36
+total time :141.50040s
+total decoding steps: 12366 large model steps: 3637 avg decoding step: 3.400054990376684
+initialization time:1.283382890904248e-05 speculate time: 0.0061065201448614135 verify time: 0.03278644818475622
+
+
+Size 32 Sequoia tree (depth 6)
+total time :140.32326s
+total decoding steps: 12390 large model steps: 3821 avg decoding step: 3.2426066474744832
+initialization time:1.2317710882454947e-05 speculate time: 0.005831054416947014 verify time: 0.030880852289706492
+
+Size 30 Sequoia tree (depth 6)
+total time :130.90557s
+total decoding steps: 11850 large model steps: 3567 avg decoding step: 3.322119428090833
+initialization time:1.2765453414553383e-05 speculate time: 0.005835139988716624 verify time: 0.03085116187764845
+
+Size 29
+total time :138.44755s
+total decoding steps: 12306 large model steps: 3785 avg decoding step: 3.251254953764861
+
+Size 28
+total time :138.45731s
+total decoding steps: 12293 large model steps: 3758 avg decoding step: 3.2711548696114954
+initialization time:1.2432913503601172e-05 speculate time: 0.005811609062125798 verify time: 0.031019308517561624
+
+Size 26
+total time :140.66732s
+total decoding steps: 12348 large model steps: 3837 avg decoding step: 3.2181391712275214
+initialization time:1.2754058042540662e-05 speculate time: 0.005816005809188418 verify time: 0.030831996307790606
+
+Size 23 (min with depth 6)
+total time :143.93611s
+total decoding steps: 12435 large model steps: 3910 avg decoding step: 3.180306905370844
+
+2335MB Allocated memory and 2552MB Cached memory
+
+Size 20 (depth 5)
+total time :144.05462s
+total decoding steps: 12441 large model steps: 4054 avg decoding step: 3.0688209176122347
+initialization time:1.2404117668915924e-05 speculate time: 0.00462972176857164 verify time: 0.030891819781250242
+
+
+60:
+2801MiB memory usage, 73% peak GPU util aberage 64% 
+
+
+
+
+
+
+
 
 
 
